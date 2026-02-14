@@ -1,0 +1,25 @@
+{
+  "name": "microsoft-test-demo-01",
+  "version": "1.0.0",
+  "description": "A comprehensive Microsoft-centric demonstration for software testing lifecycle concepts, showcasing Playwright, Azure DevOps, Azure Pipelines, Azure Test Plans, Power BI, Azure AI, and GitHub Copilot",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:report": "npx playwright show-report"
+  },
+  "keywords": [
+    "testing",
+    "playwright",
+    "azure",
+    "devops",
+    "microsoft",
+    "test-automation",
+    "ci-cd"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.41.0"
+  }
+}
