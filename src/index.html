@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Test Demo - To-Do App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main role="main">
+        <div class="container">
+            <header>
+                <h1>Microsoft Test Demo - To-Do App</h1>
+                <p class="subtitle">A simple application for testing demonstration purposes</p>
+            </header>
+
+            <section class="todo-input-section" aria-label="Add new task">
+                <div class="input-group">
+                    <label for="todo-input" class="visually-hidden">Task description</label>
+                    <input 
+                        type="text" 
+                        id="todo-input" 
+                        placeholder="Enter a new task..." 
+                        maxlength="100"
+                        aria-label="New task input"
+                    />
+                    <button 
+                        id="add-btn" 
+                        aria-label="Add task"
+                        type="button"
+                    >
+                        Add Task
+                    </button>
+                </div>
+                <p class="character-count" aria-live="polite">
+                    <span id="char-count">0</span>/100 characters
+                </p>
+            </section>
+
+            <section class="todo-list-section" aria-label="Task list">
+                <div class="list-header">
+                    <h2>Tasks</h2>
+                    <div class="filter-buttons" role="group" aria-label="Filter tasks">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="active">Active</button>
+                        <button class="filter-btn" data-filter="completed">Completed</button>
+                    </div>
+                </div>
+                
+                <ul id="todo-list" aria-label="Task items">
+                    <!-- Tasks will be added here dynamically -->
+                </ul>
+
+                <div class="list-footer">
+                    <p id="task-count" aria-live="polite">0 tasks remaining</p>
+                    <button id="clear-completed-btn" type="button">Clear Completed</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        // DOM Elements
+        const todoInput = document.getElementById('todo-input');
+        const addBtn = document.getElementById('add-btn');
+        const todoList = document.getElementById('todo-list');
+        const taskCount = document.getElementById('task-count');
+        const charCount = document.getElementById('char-count');
+        const clearCompletedBtn = document.getElementById('clear-completed-btn');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+
+        // State
+        let todos = JSON.parse(localStorage.getItem('todos')) || [];
+        let currentFilter = 'all';
+
+        // Initialize
+        renderTodos();
+        updateTaskCount();
+
+        // Event Listeners
+        addBtn.addEventListener('click', addTodo);
+        todoInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                addTodo();
+            }
+        });
+        todoInput.addEventListener('input', updateCharCount);
+        clearCompletedBtn.addEventListener('click', clearCompleted);
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                setFilter(btn.dataset.filter);
+            });
+        });
+
+        // Functions
+        function addTodo() {
+            const text = todoInput.value.trim();
+            if (text === '') {
+                alert('Please enter a task');
+                return;
+            }
+
+            const todo = {
+                id: Date.now(),
+                text: text,
+                completed: false,
+                createdAt: new Date().toISOString()
+            };
+
+            todos.push(todo);
+            saveTodos();
+            renderTodos();
+            updateTaskCount();
+
+            // Clear input
+            todoInput.value = '';
+            updateCharCount();
+            todoInput.focus();
+        }
+
+        function deleteTodo(id) {
+            todos = todos.filter(todo => todo.id !== id);
+            saveTodos();
+            renderTodos();
+            updateTaskCount();
+        }
+
+        function toggleTodo(id) {
+            const todo = todos.find(todo => todo.id === id);
+            if (todo) {
+                todo.completed = !todo.completed;
+                saveTodos();
+                renderTodos();
+                updateTaskCount();
+            }
+        }
+
+        function renderTodos() {
+            todoList.innerHTML = '';
+
+            const filteredTodos = todos.filter(todo => {
+                if (currentFilter === 'active') return !todo.completed;
+                if (currentFilter === 'completed') return todo.completed;
+                return true;
+            });
+
+            if (filteredTodos.length === 0) {
+                const emptyMessage = document.createElement('li');
+                emptyMessage.className = 'empty-message';
+                emptyMessage.textContent = currentFilter === 'all' 
+                    ? 'No tasks yet. Add one to get started!' 
+                    : `No ${currentFilter} tasks.`;
+                todoList.appendChild(emptyMessage);
+                return;
+            }
+
+            filteredTodos.forEach(todo => {
+                const li = document.createElement('li');
+                li.className = 'todo-item';
+                li.setAttribute('data-id', todo.id);
+                if (todo.completed) {
+                    li.classList.add('completed');
+                }
+
+                li.innerHTML = `
+                    <input 
+                        type="checkbox" 
+                        id="todo-${todo.id}" 
+                        ${todo.completed ? 'checked' : ''}
+                        aria-label="Mark task as ${todo.completed ? 'incomplete' : 'complete'}"
+                    />
+                    <label for="todo-${todo.id}">${escapeHtml(todo.text)}</label>
+                    <button 
+                        class="delete-btn" 
+                        aria-label="Delete task: ${escapeHtml(todo.text)}"
+                        type="button"
+                    >
+                        Delete
+                    </button>
+                `;
+
+                // Add event listeners
+                const checkbox = li.querySelector('input[type="checkbox"]');
+                checkbox.addEventListener('change', () => toggleTodo(todo.id));
+
+                const deleteBtn = li.querySelector('.delete-btn');
+                deleteBtn.addEventListener('click', () => deleteTodo(todo.id));
+
+                todoList.appendChild(li);
+            });
+        }
+
+        function updateTaskCount() {
+            const activeCount = todos.filter(todo => !todo.completed).length;
+            taskCount.textContent = `${activeCount} task${activeCount !== 1 ? 's' : ''} remaining`;
+        }
+
+        function updateCharCount() {
+            const length = todoInput.value.length;
+            charCount.textContent = length;
+        }
+
+        function clearCompleted() {
+            todos = todos.filter(todo => !todo.completed);
+            saveTodos();
+            renderTodos();
+            updateTaskCount();
+        }
+
+        function setFilter(filter) {
+            currentFilter = filter;
+            filterBtns.forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.filter === filter);
+            });
+            renderTodos();
+        }
+
+        function saveTodos() {
+            localStorage.setItem('todos', JSON.stringify(todos));
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+    </script>
+</body>
+</html>
