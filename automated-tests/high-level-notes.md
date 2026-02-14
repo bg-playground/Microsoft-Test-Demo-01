@@ -70,7 +70,7 @@ Automated scripts are designed to streamline the testing process, ensuring consi
 ## 5. Continuous Integration
 
 ### Azure Pipelines
-- **Primary CI/CD platform** for Microsoft-centric projects
+- **Primary CI/CD platform** for Microsoft Ecosystem projects
 - Automated test execution on every commit and pull request
 - Multi-stage pipelines for build, test, and deployment
 - Integration with Azure Test Plans for test management
