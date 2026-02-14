@@ -8,6 +8,28 @@ A comprehensive demonstration of the software testing lifecycle using **Microsof
 
 > 🌐 **[View Professional Documentation Site](https://bg-playground.github.io/Microsoft-Test-Demo-01/)** | 🚀 **[Try Live Demo](https://bg-playground.github.io/Microsoft-Test-Demo-01/src/)**
 
+## 🎯 Portfolio Highlights
+
+This project demonstrates:
+- ✅ **Complete Testing Lifecycle** - All 6 stages from planning to reporting
+- ✅ **Modern Tech Stack** - Playwright, Azure DevOps, CI/CD, GitHub Actions
+- ✅ **Professional Documentation** - Architecture diagrams, test plans, contribution guides
+- ✅ **Live Interactive Demo** - Fully functional To-Do application
+- ✅ **Automated Testing** - Multi-browser tests with screenshots and traces
+- ✅ **Accessibility First** - ARIA attributes, keyboard navigation, semantic HTML
+- ✅ **Best Practices** - Security, performance, responsive design
+
+### Professional Landing Page
+
+![Professional Landing Page](https://github.com/user-attachments/assets/8ccae770-b0c7-4aec-92fc-e7b293ca7352)
+
+**Features:**
+- Modern Microsoft Fluent-inspired design
+- Interactive navigation and smooth scrolling
+- Technology stack showcase
+- Live demo embed
+- Comprehensive documentation links
+
 ## Overview
 
 This project demonstrates a complete testing approach leveraging Microsoft's ecosystem, including **Playwright for Testing**, **Azure DevOps**, **Azure Pipelines**, **Azure Test Plans**, **Power BI**, **Azure AI**, and **GitHub Copilot**. It includes both automated and manual testing examples, along with a sample To-Do application to serve as the application under test.
@@ -65,6 +87,7 @@ This demonstration incorporates **AI-powered testing** approaches:
 ```
 Microsoft-Test-Demo-01/
 ├── README.md                          # This file
+├── CONTRIBUTING.md                    # Contribution guidelines
 ├── package.json                       # Node.js dependencies and scripts
 ├── playwright.config.js               # Playwright configuration (multi-browser)
 ├── .gitignore                         # Git ignore rules
@@ -86,8 +109,12 @@ Microsoft-Test-Demo-01/
 │   ├── README.md                      # Manual testing overview
 │   └── test-cases.md                  # Detailed manual test cases for Azure Test Plans
 └── docs/
-    ├── README.md                      # Documentation overview
-    └── test-plan.md                   # Comprehensive test plan
+    ├── index.html                     # Professional landing page (GitHub Pages)
+    ├── styles/
+    │   └── landing.css                # Landing page styling
+    ├── architecture.md                # System architecture documentation
+    ├── test-plan.md                   # Comprehensive test plan
+    └── README.md                      # Documentation overview
 ```
 
 ## Getting Started
