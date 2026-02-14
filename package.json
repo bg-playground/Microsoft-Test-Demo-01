@@ -6,7 +6,9 @@
   "scripts": {
     "test": "npx playwright test",
     "test:headed": "npx playwright test --headed",
-    "test:report": "npx playwright show-report"
+    "test:report": "npx playwright show-report",
+    "test:coverage": "nyc npx playwright test",
+    "test:coverage:report": "nyc report --reporter=html"
   },
   "keywords": [
     "testing",
@@ -20,6 +22,20 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@playwright/test": "^1.41.0"
+    "@axe-core/playwright": "^4.8.0",
+    "@playwright/test": "^1.41.0",
+    "axe-core": "^4.8.0",
+    "nyc": "^15.1.0"
+  },
+  "nyc": {
+    "reporter": [
+      "text",
+      "html",
+      "lcov"
+    ],
+    "check-coverage": true,
+    "lines": 80,
+    "functions": 80,
+    "branches": 80
   }
 }
