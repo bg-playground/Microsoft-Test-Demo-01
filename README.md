@@ -8,6 +8,8 @@ A comprehensive demonstration of the software testing lifecycle using **Microsof
 
 > 🌐 **[View Professional Documentation Site](https://bg-playground.github.io/Microsoft-Test-Demo-01/)** | 🚀 **[Try Live Demo](https://bg-playground.github.io/Microsoft-Test-Demo-01/src/)**
 
+> ⚠️ **Note**: If the links above show 404 errors, GitHub Pages needs to be enabled. See [SETUP.md](SETUP.md) for step-by-step instructions to enable GitHub Pages and configure repository settings.
+
 ## 🎯 Portfolio Highlights
 
 This project demonstrates:
@@ -88,6 +90,9 @@ This demonstration incorporates **AI-powered testing** approaches:
 Microsoft-Test-Demo-01/
 ├── README.md                          # This file
 ├── CONTRIBUTING.md                    # Contribution guidelines
+├── SECURITY.md                        # Security policy and vulnerability reporting
+├── SETUP.md                          # Repository setup and GitHub Pages configuration
+├── QUICK_START.md                    # Quick start guide for employers/reviewers
 ├── package.json                       # Node.js dependencies and scripts
 ├── playwright.config.js               # Playwright configuration (multi-browser)
 ├── .gitignore                         # Git ignore rules
@@ -110,12 +115,40 @@ Microsoft-Test-Demo-01/
 │   └── test-cases.md                  # Detailed manual test cases for Azure Test Plans
 └── docs/
     ├── index.html                     # Professional landing page (GitHub Pages)
+    ├── .nojekyll                      # Bypass Jekyll processing
     ├── styles/
     │   └── landing.css                # Landing page styling
     ├── architecture.md                # System architecture documentation
     ├── test-plan.md                   # Comprehensive test plan
     └── README.md                      # Documentation overview
 ```
+
+## Repository Setup
+
+### 🚀 Enable GitHub Pages
+
+To make the landing page and live demo accessible:
+
+1. **Merge to Main Branch**: Ensure all changes are on the `main` branch
+2. **Enable GitHub Pages**:
+   - Go to **Settings** → **Pages**
+   - Source: **Deploy from a branch**
+   - Branch: **main**, Folder: **/docs**
+   - Click **Save**
+3. **Wait 1-5 minutes** for deployment
+
+**Detailed Instructions**: See [SETUP.md](SETUP.md) for complete step-by-step guide.
+
+### 🔒 Security & Protection
+
+**Recommended Repository Settings**:
+- ✅ Enable branch protection on `main`
+- ✅ Require pull request reviews
+- ✅ Enable Dependabot alerts
+- ✅ Enable CodeQL scanning
+- ✅ Enable secret scanning
+
+**Security Policy**: See [SECURITY.md](SECURITY.md) for vulnerability reporting and security best practices.
 
 ## Getting Started
 
