@@ -1,8 +1,12 @@
 # Microsoft Test Demo 01
 
 [![Playwright Tests](https://github.com/bg-playground/Microsoft-Test-Demo-01/actions/workflows/playwright.yml/badge.svg)](https://github.com/bg-playground/Microsoft-Test-Demo-01/actions/workflows/playwright.yml)
+[![View Documentation](https://img.shields.io/badge/View-Documentation-blue?style=flat&logo=github)](https://bg-playground.github.io/Microsoft-Test-Demo-01/)
+[![Live Demo](https://img.shields.io/badge/Try-Live%20Demo-success?style=flat&logo=github)](https://bg-playground.github.io/Microsoft-Test-Demo-01/src/)
 
 A comprehensive demonstration of the software testing lifecycle using **Microsoft-centric tools and technologies**. This repository showcases best practices across all testing phases: Test Planning, Test Case Development, Test Environment Preparation, Test Execution, Test Results Analysis, and Results Reporting.
+
+> 🌐 **[View Professional Documentation Site](https://bg-playground.github.io/Microsoft-Test-Demo-01/)** | 🚀 **[Try Live Demo](https://bg-playground.github.io/Microsoft-Test-Demo-01/src/)**
 
 ## Overview
 

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Test Demo - Professional Testing Portfolio</title>
+    <link rel="stylesheet" href="styles/landing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>Microsoft Test Demo</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#testing">Testing</a></li>
+                <li><a href="#documentation">Docs</a></li>
+                <li><a href="https://github.com/bg-playground/Microsoft-Test-Demo-01" target="_blank" class="btn-primary">View on GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Microsoft-Centric Testing Excellence</h1>
+                <p class="hero-subtitle">A comprehensive demonstration of modern software testing practices using Microsoft's ecosystem</p>
+                <div class="hero-badges">
+                    <img src="https://github.com/bg-playground/Microsoft-Test-Demo-01/actions/workflows/playwright.yml/badge.svg" alt="Build Status">
+                    <span class="badge">Playwright</span>
+                    <span class="badge">Azure DevOps</span>
+                    <span class="badge">CI/CD</span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#demo" class="btn btn-primary btn-large">Try Live Demo</a>
+                    <a href="#documentation" class="btn btn-secondary btn-large">View Documentation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Project Overview</h2>
+            <p class="section-description">
+                This repository demonstrates a complete testing approach leveraging Microsoft's ecosystem, 
+                including <strong>Playwright for Testing</strong>, <strong>Azure DevOps</strong>, 
+                <strong>Azure Pipelines</strong>, <strong>Azure Test Plans</strong>, <strong>Power BI</strong>, 
+                <strong>Azure AI</strong>, and <strong>GitHub Copilot</strong>.
+            </p>
+            
+            <div class="tech-stack">
+                <h3>Technology Stack</h3>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon">🎭</div>
+                        <h4>Playwright</h4>
+                        <p>Modern end-to-end testing framework</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">☁️</div>
+                        <h4>Azure DevOps</h4>
+                        <p>Complete DevOps lifecycle management</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🔄</div>
+                        <h4>CI/CD Pipelines</h4>
+                        <p>Automated testing & deployment</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📊</div>
+                        <h4>Power BI</h4>
+                        <p>Test results visualization</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🤖</div>
+                        <h4>Azure AI</h4>
+                        <p>AI-powered testing insights</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">💡</div>
+                        <h4>GitHub Copilot</h4>
+                        <p>AI-assisted test development</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-number">01</div>
+                    <h3>Complete Testing Lifecycle</h3>
+                    <p>Demonstrates all 6 stages: Planning, Development, Environment Setup, Execution, Analysis, and Reporting</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-number">02</div>
+                    <h3>Multi-Browser Testing</h3>
+                    <p>Automated tests run across Chromium, Firefox, and WebKit browsers in parallel</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-number">03</div>
+                    <h3>Comprehensive Test Suite</h3>
+                    <p>Navigation, forms, accessibility, and API testing examples with best practices</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-number">04</div>
+                    <h3>Sample Application</h3>
+                    <p>Fully functional To-Do app with accessibility features and responsive design</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-number">05</div>
+                    <h3>CI/CD Integration</h3>
+                    <p>GitHub Actions workflow with automated test execution and reporting</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-number">06</div>
+                    <h3>Manual Testing</h3>
+                    <p>Detailed test cases designed for Azure Test Plans integration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Demo Section -->
+    <section id="demo" class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Live Demo</h2>
+            <p class="section-description">
+                Experience the fully functional To-Do application that serves as our test target. 
+                This app demonstrates accessibility best practices, responsive design, and modern web development.
+            </p>
+            <div class="demo-container">
+                <iframe src="../src/index.html" class="demo-iframe" title="To-Do App Demo"></iframe>
+                <div class="demo-info">
+                    <h3>Demo Features</h3>
+                    <ul>
+                        <li>✅ Add, complete, and delete tasks</li>
+                        <li>✅ Filter by all, active, or completed</li>
+                        <li>✅ LocalStorage persistence</li>
+                        <li>✅ Character counter (100 char limit)</li>
+                        <li>✅ Fully keyboard accessible</li>
+                        <li>✅ Responsive design for all devices</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testing Lifecycle Section -->
+    <section id="testing" class="section">
+        <div class="container">
+            <h2 class="section-title">Testing Lifecycle Stages</h2>
+            <div class="lifecycle-grid">
+                <div class="lifecycle-stage">
+                    <div class="stage-icon">📋</div>
+                    <h3>1. Test Planning</h3>
+                    <p><strong>Tools:</strong> Azure Test Plans, Azure DevOps Boards</p>
+                    <p>Strategic planning documents, risk assessment, resource allocation</p>
+                </div>
+                <div class="lifecycle-stage">
+                    <div class="stage-icon">✍️</div>
+                    <h3>2. Test Development</h3>
+                    <p><strong>Tools:</strong> Playwright, VS Code, GitHub Copilot</p>
+                    <p>Manual and automated test cases with AI-assisted development</p>
+                </div>
+                <div class="lifecycle-stage">
+                    <div class="stage-icon">🛠️</div>
+                    <h3>3. Environment Setup</h3>
+                    <p><strong>Tools:</strong> Azure VMs, Docker</p>
+                    <p>Consistent, reproducible test environments</p>
+                </div>
+                <div class="lifecycle-stage">
+                    <div class="stage-icon">▶️</div>
+                    <h3>4. Test Execution</h3>
+                    <p><strong>Tools:</strong> Playwright, Azure Pipelines</p>
+                    <p>Automated execution across multiple browsers and devices</p>
+                </div>
+                <div class="lifecycle-stage">
+                    <div class="stage-icon">🔍</div>
+                    <h3>5. Results Analysis</h3>
+                    <p><strong>Tools:</strong> HTML Reporter, Trace Viewer</p>
+                    <p>Detailed failure analysis with screenshots and traces</p>
+                </div>
+                <div class="lifecycle-stage">
+                    <div class="stage-icon">📊</div>
+                    <h3>6. Results Reporting</h3>
+                    <p><strong>Tools:</strong> Power BI, Azure Dashboards</p>
+                    <p>Rich visualizations and trend analysis</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="documentation" class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Documentation</h2>
+            <div class="docs-grid">
+                <a href="test-plan.html" class="doc-card">
+                    <div class="doc-icon">📄</div>
+                    <h3>Test Plan</h3>
+                    <p>Comprehensive test strategy and planning document</p>
+                </a>
+                <a href="README.html" class="doc-card">
+                    <div class="doc-icon">📖</div>
+                    <h3>User Guide</h3>
+                    <p>Getting started, installation, and usage instructions</p>
+                </a>
+                <a href="../automated-tests/high-level-notes.html" class="doc-card">
+                    <div class="doc-icon">🤖</div>
+                    <h3>Automation Guide</h3>
+                    <p>Best practices for automated testing with Playwright</p>
+                </a>
+                <a href="../manual-tests/test-cases.html" class="doc-card">
+                    <div class="doc-icon">✅</div>
+                    <h3>Manual Test Cases</h3>
+                    <p>Detailed manual test cases for Azure Test Plans</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section section-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Testing Lifecycle Stages</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Automated Tests</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Browser Engines</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Manual Test Cases</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section cta-section">
+        <div class="container">
+            <h2>Ready to Explore?</h2>
+            <p>View the complete source code and documentation on GitHub</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/bg-playground/Microsoft-Test-Demo-01" target="_blank" class="btn btn-primary btn-large">
+                    View on GitHub →
+                </a>
+                <a href="https://github.com/bg-playground/Microsoft-Test-Demo-01/fork" target="_blank" class="btn btn-secondary btn-large">
+                    Fork Repository
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Microsoft Test Demo</h4>
+                    <p>A comprehensive testing lifecycle demonstration</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="https://github.com/bg-playground/Microsoft-Test-Demo-01">GitHub Repository</a></li>
+                        <li><a href="https://playwright.dev">Playwright Documentation</a></li>
+                        <li><a href="https://azure.microsoft.com/en-us/services/devops/">Azure DevOps</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Technologies</h4>
+                    <ul>
+                        <li>Playwright for Testing</li>
+                        <li>Azure Pipelines</li>
+                        <li>GitHub Actions</li>
+                        <li>Power BI</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Microsoft Test Demo. Open source under MIT License.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
