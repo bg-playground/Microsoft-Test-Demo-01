@@ -37,7 +37,7 @@ test.describe('Responsive Design Tests', () => {
     
     // Start with mobile viewport
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.waitForTimeout(500);
+    await page.waitForLoadState('networkidle');
     
     // Verify content is visible
     const body = page.locator('body');
@@ -45,7 +45,7 @@ test.describe('Responsive Design Tests', () => {
     
     // Switch to desktop viewport
     await page.setViewportSize({ width: 1920, height: 1080 });
-    await page.waitForTimeout(500);
+    await page.waitForLoadState('networkidle');
     
     // Verify content still visible
     await expect(body).toBeVisible();
