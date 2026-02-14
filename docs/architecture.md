@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Microsoft Test Demo project is structured to demonstrate a complete testing lifecycle using Microsoft-centric tools and technologies. This document outlines the system architecture, component interactions, and technology decisions.
+The Microsoft Test Demo project is structured to demonstrate a complete testing lifecycle using Microsoft Ecosystem tools and technologies. This document outlines the system architecture, component interactions, and technology decisions.
 
 ## Architecture Diagram
 
@@ -349,4 +349,4 @@ Tests use:
 
 ## Conclusion
 
-This architecture provides a solid foundation for demonstrating software testing practices with Microsoft-centric tools. The modular design allows for easy extension and modification while maintaining simplicity and clarity for educational purposes.
+This architecture provides a solid foundation for demonstrating software testing practices with Microsoft Ecosystem tools. The modular design allows for easy extension and modification while maintaining simplicity and clarity for educational purposes.
