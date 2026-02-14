@@ -11,11 +11,13 @@ Welcome to the Microsoft Test Demo documentation! This directory contains compre
 
 ### Architecture & Design
 - **[System Architecture](architecture.md)** - Detailed system design, components, and data flows
+- **[CI/CD Pipeline](cicd-pipeline.md)** - Automated testing and deployment workflow
 - **[Test Plan](test-plan.md)** - Comprehensive testing strategy
 
 ### Testing Documentation
 - **[Automated Testing Notes](../automated-tests/high-level-notes.md)** - Framework details and best practices
 - **[Manual Test Cases](../manual-tests/test-cases.md)** - Detailed test scenarios for Azure Test Plans
+- **[Accessibility Report](accessibility-report.md)** - WCAG compliance and testing approach
 
 ### Interactive Resources
 - **[Professional Landing Page](index.html)** - Live documentation site

@@ -6,6 +6,10 @@ test-results/
 playwright-report/
 blob-report/
 
+# Coverage
+coverage/
+.nyc_output/
+
 # Environment variables
 .env
 

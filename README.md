@@ -1,6 +1,7 @@
 # Microsoft Test Demo 01
 
 [![Playwright Tests](https://github.com/bg-playground/Microsoft-Test-Demo-01/actions/workflows/playwright.yml/badge.svg)](https://github.com/bg-playground/Microsoft-Test-Demo-01/actions/workflows/playwright.yml)
+[![Coverage](https://img.shields.io/badge/coverage-check%20tests-blue)](https://github.com/bg-playground/Microsoft-Test-Demo-01)
 [![View Documentation](https://img.shields.io/badge/View-Documentation-blue?style=flat&logo=github)](https://bg-playground.github.io/Microsoft-Test-Demo-01/)
 [![Live Demo](https://img.shields.io/badge/Try-Live%20Demo-success?style=flat&logo=github)](https://bg-playground.github.io/Microsoft-Test-Demo-01/src/)
 
@@ -18,7 +19,7 @@ This project demonstrates:
 - ✅ **Professional Documentation** - Architecture diagrams, test plans, contribution guides
 - ✅ **Live Interactive Demo** - Fully functional To-Do application
 - ✅ **Automated Testing** - Multi-browser tests with screenshots and traces
-- ✅ **Accessibility First** - ARIA attributes, keyboard navigation, semantic HTML
+- ✅ **Accessibility First** - WCAG 2.1 compliance, ARIA attributes, keyboard navigation, semantic HTML
 - ✅ **Best Practices** - Security, performance, responsive design
 
 ### Professional Landing Page
@@ -107,6 +108,8 @@ Microsoft-Test-Demo-01/
 │   ├── navigation.spec.js             # Navigation tests
 │   ├── form-validation.spec.js        # Form interaction tests
 │   ├── accessibility.spec.js          # Accessibility checks
+│   ├── responsive.spec.js             # Responsive design testing
+│   ├── device-emulation.spec.js       # Device emulation testing
 │   └── api.spec.js                    # API testing examples
 ├── automated-tests/
 │   └── high-level-notes.md            # Automation framework notes (Microsoft Ecosystem)
@@ -118,6 +121,8 @@ Microsoft-Test-Demo-01/
     ├── .nojekyll                      # Bypass Jekyll processing
     ├── styles/
     │   └── landing.css                # Landing page styling
+    ├── cicd-pipeline.md               # CI/CD pipeline visualization
+    ├── accessibility-report.md        # Accessibility compliance documentation
     ├── architecture.md                # System architecture documentation
     ├── test-plan.md                   # Comprehensive test plan
     └── README.md                      # Documentation overview
@@ -215,6 +220,7 @@ Then navigate to `http://localhost:3000`
 ### Development Tools
 - **Visual Studio Code** - Primary IDE
 - **GitHub Actions** - CI/CD workflows
+- **Automated CI/CD Pipeline** - See [pipeline visualization](docs/cicd-pipeline.md)
 - **Node.js** - Runtime environment
 
 ### Testing Capabilities
@@ -224,7 +230,10 @@ Then navigate to `http://localhost:3000`
 - ✅ Test traces for debugging
 - ✅ Retry mechanism for flaky tests
 - ✅ API testing
-- ✅ Accessibility testing
+- ✅ Accessibility testing (WCAG 2.1 AA compliance with axe-core)
+- ✅ Mobile and responsive design testing
+- ✅ Real device emulation (iPhone, iPad, Android)
+- ✅ Code coverage reporting with Istanbul/nyc
 - ✅ CI/CD integration
 
 ## Contributing
