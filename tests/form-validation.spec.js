@@ -55,8 +55,8 @@ test.describe('Form Validation Tests', () => {
     await searchInput.fill('playwright');
     await searchInput.press('Enter');
     
-    // Wait for results or navigation
-    await page.waitForTimeout(1000);
+    // Wait for navigation or load state to complete
+    await page.waitForLoadState('networkidle');
     
     // Verify something changed (URL or content)
     const url = page.url();
