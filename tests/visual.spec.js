@@ -22,7 +22,7 @@ test.describe('Visual Regression Tests', () => {
 
   test('to-do list component should render correctly', async ({ page }) => {
     if (skipVisualTests) {
-      test.skip(true, 'Visual baselines not yet established');
+      test.skip(true, 'Visual baselines not yet established - run locally with --update-snapshots');
       return;
     }
     
@@ -42,7 +42,7 @@ test.describe('Visual Regression Tests', () => {
 
   test('dark mode should render correctly', async ({ page }) => {
     if (skipVisualTests) {
-      test.skip(true, 'Visual baselines not yet established');
+      test.skip(true, 'Visual baselines not yet established - run locally with --update-snapshots');
       return;
     }
     
@@ -58,13 +58,16 @@ test.describe('Visual Regression Tests', () => {
     }
     
     await darkModeToggle.click();
-    await page.waitForTimeout(500);
+    // Wait for dark mode to be applied by checking for dark mode indicator
+    await page.waitForSelector('body.dark-mode, html.dark-mode, [data-theme="dark"]', { timeout: 2000 }).catch(() => {
+      // If no specific dark mode indicator, rely on screenshot retry logic
+    });
     await expect(page).toHaveScreenshot('homepage-dark-mode.png');
   });
 
   test('mobile viewport should match baseline', async ({ page }) => {
     if (skipVisualTests) {
-      test.skip(true, 'Visual baselines not yet established');
+      test.skip(true, 'Visual baselines not yet established - run locally with --update-snapshots');
       return;
     }
     
