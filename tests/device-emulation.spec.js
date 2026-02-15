@@ -6,22 +6,22 @@ test.describe('Device Emulation Tests', () => {
     'Device emulation (isMobile, hasTouch) is not supported in Firefox');
 
   test('should emulate iPhone 13', async ({ page }) => {
-    await page.goto('file:///home/runner/work/Microsoft-Test-Demo-01/Microsoft-Test-Demo-01/src/index.html');
+    await page.goto('/');
     await expect(page).toHaveTitle(/Microsoft Test Demo|To-Do/);
   });
 
   test('should emulate Pixel 5', async ({ page }) => {
-    await page.goto('file:///home/runner/work/Microsoft-Test-Demo-01/Microsoft-Test-Demo-01/src/index.html');
+    await page.goto('/');
     await expect(page).toHaveTitle(/Microsoft Test Demo|To-Do/);
   });
 
   test('should emulate iPad Pro', async ({ page }) => {
-    await page.goto('file:///home/runner/work/Microsoft-Test-Demo-01/Microsoft-Test-Demo-01/src/index.html');
+    await page.goto('/');
     await expect(page).toHaveTitle(/Microsoft Test Demo|To-Do/);
   });
 
   test('should handle touch events on mobile devices', async ({ page }) => {
-    await page.goto('file:///home/runner/work/Microsoft-Test-Demo-01/Microsoft-Test-Demo-01/src/index.html');
+    await page.goto('/');
     
     // Verify the page loaded
     await expect(page).toHaveTitle(/Microsoft Test Demo|To-Do/);
@@ -32,7 +32,7 @@ test.describe('Device Emulation Tests', () => {
   });
 
   test('should respect device viewport size', async ({ page }) => {
-    await page.goto('file:///home/runner/work/Microsoft-Test-Demo-01/Microsoft-Test-Demo-01/src/index.html');
+    await page.goto('/');
     
     // Get viewport size
     const viewportSize = page.viewportSize();
@@ -52,7 +52,7 @@ test.describe('Device Emulation Tests', () => {
     });
     const page = await context.newPage();
     
-    await page.goto('file:///home/runner/work/Microsoft-Test-Demo-01/Microsoft-Test-Demo-01/src/index.html');
+    await page.goto('/');
     
     // Verify user agent includes mobile identifier
     const userAgent = await page.evaluate(() => navigator.userAgent);
@@ -64,7 +64,7 @@ test.describe('Device Emulation Tests', () => {
   test('should render correctly on different screen sizes', async ({ page }) => {
     // Test mobile viewport
     await page.setViewportSize({ width: 375, height: 667 });
-    await page.goto('file:///home/runner/work/Microsoft-Test-Demo-01/Microsoft-Test-Demo-01/src/index.html');
+    await page.goto('/');
     await expect(page).toHaveTitle(/Microsoft Test Demo|To-Do/);
     
     // Test tablet viewport
