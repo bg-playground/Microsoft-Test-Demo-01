@@ -9,11 +9,16 @@ test.describe('Performance Tests', () => {
       const paintMetrics = performance.getEntriesByType('paint');
       const navigationTiming = performance.getEntriesByType('navigation')[0];
       
+      // Ensure navigation timing is available
+      if (!navigationTiming) {
+        throw new Error('Navigation timing not available');
+      }
+      
       return {
         firstPaint: paintMetrics.find(m => m.name === 'first-paint')?.startTime || 0,
         firstContentfulPaint: paintMetrics.find(m => m.name === 'first-contentful-paint')?.startTime || 0,
-        domContentLoaded: navigationTiming?.domContentLoadedEventEnd - navigationTiming?.domContentLoadedEventStart || 0,
-        loadComplete: navigationTiming?.loadEventEnd - navigationTiming?.loadEventStart || 0
+        domContentLoaded: navigationTiming.domContentLoadedEventEnd - navigationTiming.domContentLoadedEventStart,
+        loadComplete: navigationTiming.loadEventEnd - navigationTiming.loadEventStart
       };
     });
     

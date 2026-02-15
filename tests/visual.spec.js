@@ -25,16 +25,23 @@ test.describe('Visual Regression Tests', () => {
     
     // Toggle dark mode if available
     const darkModeToggle = page.locator('[data-testid="dark-mode-toggle"]');
-    if (await darkModeToggle.isVisible()) {
+    if (await darkModeToggle.count() > 0) {
       await darkModeToggle.click();
-      await page.waitForTimeout(500);
+      // Wait for dark mode class to be applied (adjust selector as needed)
+      await page.waitForSelector('body.dark-mode, html.dark-mode, [data-theme="dark"]', { timeout: 2000 }).catch(() => {
+        // If no specific dark mode indicator, wait for visual changes to settle
+        return page.waitForLoadState('networkidle');
+      });
       await expect(page).toHaveScreenshot('homepage-dark-mode.png');
+    } else {
+      test.skip();
     }
   });
   
   test('mobile viewport should match baseline', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
     await page.goto('/');
+    await page.waitForLoadState('networkidle');
     await expect(page).toHaveScreenshot('homepage-mobile.png');
   });
 });
