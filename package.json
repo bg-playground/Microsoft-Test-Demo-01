@@ -8,7 +8,9 @@
     "test:headed": "npx playwright test --headed",
     "test:report": "npx playwright show-report",
     "test:coverage": "nyc npx playwright test",
-    "test:coverage:report": "nyc report --reporter=html"
+    "test:coverage:report": "nyc report --reporter=html",
+    "test:visual": "npx playwright test tests/visual.spec.js",
+    "test:visual:update": "npx playwright test tests/visual.spec.js --update-snapshots"
   },
   "keywords": [
     "testing",

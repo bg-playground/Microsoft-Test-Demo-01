@@ -27,3 +27,10 @@ Thumbs.db
 # Logs
 *.log
 npm-debug.log*
+
+# Visual regression test baselines (commit these)
+# tests/**/__screenshots__/
+
+# Visual regression test outputs (ignore these)
+test-results/**/diff.png
+test-results/**/actual.png
