@@ -11,7 +11,7 @@
 
 | Resource | Description |
 |----------|-------------|
-| 🎥 **[2-Minute Video Demo](#)** | Watch the testing framework in action *(video coming soon)* |
+| 🎥 **2-Minute Video Demo** | Watch the testing framework in action *(video coming soon)* |
 | 🚀 **[Live Application Demo](https://bg-playground.github.io/Microsoft-Test-Demo-01/src/)** | Try the interactive to-do app yourself |
 | 📊 **[Documentation Site](https://bg-playground.github.io/Microsoft-Test-Demo-01/)** | Comprehensive testing documentation and strategy |
 | 📈 **[Latest Test Results](https://github.com/bg-playground/Microsoft-Test-Demo-01/actions)** | View CI/CD pipeline and test execution reports |

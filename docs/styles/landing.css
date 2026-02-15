@@ -767,22 +767,44 @@ body {
 .video-container {
     max-width: 900px;
     margin: 0 auto;
-    aspect-ratio: 16 / 9;
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Fallback: 16:9 aspect ratio */
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Modern browsers with aspect-ratio support */
+@supports (aspect-ratio: 16 / 9) {
+    .video-container {
+        padding-top: 0;
+        aspect-ratio: 16 / 9;
+    }
 }
 
 .video-placeholder {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 2px dashed rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 40px;
+}
+
+/* Modern browsers with aspect-ratio support */
+@supports (aspect-ratio: 16 / 9) {
+    .video-placeholder {
+        position: static;
+        height: 100%;
+    }
 }
 
 .placeholder-icon {
