@@ -10,6 +10,41 @@ Visual regression testing catches unintended UI changes by comparing screenshots
 3. **Diff Detection**: Pixel-by-pixel comparison identifies changes
 4. **Review**: Developers review diffs and update baselines if intentional
 
+## Initial Setup
+
+Visual regression tests require baseline screenshots to be created before they can run in CI/CD.
+
+### Creating Baselines Locally
+
+```bash
+# Run tests with update flag to create initial baselines
+npx playwright test tests/visual.spec.js --update-snapshots
+
+# Commit the baseline screenshots
+git add tests/**/*-snapshots/
+git commit -m "Add visual regression baselines"
+git push
+```
+
+### CI/CD Behavior
+
+- **First Run**: Tests will be skipped until baselines are committed
+- **After Baselines Exist**: Tests will run and fail if visual changes detected
+- **Updating Baselines**: Re-run with `--update-snapshots` and commit changes
+
+## Baseline Storage
+
+Baselines are stored in:
+```
+tests/visual.spec.js-snapshots/
+├── homepage-chromium-linux.png
+├── homepage-firefox-linux.png
+├── homepage-webkit-linux.png
+└── ...
+```
+
+These files **should be committed** to version control.
+
 ## Baseline Management
 
 Baseline screenshots are stored in `tests/__screenshots__/` directory.

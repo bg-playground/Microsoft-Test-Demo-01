@@ -6,6 +6,10 @@ test-results/
 playwright-report/
 blob-report/
 
+# Visual test outputs (DON'T commit these)
+test-results/**/diff.png
+test-results/**/actual.png
+
 # Coverage
 coverage/
 .nyc_output/
@@ -27,10 +31,3 @@ Thumbs.db
 # Logs
 *.log
 npm-debug.log*
-
-# Visual regression test baselines (commit these)
-# tests/**/__screenshots__/
-
-# Visual regression test outputs (ignore these)
-test-results/**/diff.png
-test-results/**/actual.png

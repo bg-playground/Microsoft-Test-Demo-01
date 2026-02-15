@@ -102,6 +102,17 @@ npm run test:headed
 npm run test:report
 ```
 
+## Visual Regression Testing
+
+When adding or modifying visual regression tests:
+
+1. **Run locally first**: `npm run test:visual:update`
+2. **Review screenshots**: Check `tests/visual.spec.js-snapshots/` directory
+3. **Commit baselines**: `git add tests/**/*-snapshots/`
+4. **CI will use these baselines**: Future test runs will compare against committed screenshots
+
+Visual tests are automatically skipped in CI until baselines exist.
+
 ### Writing Tests
 
 When adding new tests, follow these guidelines:
