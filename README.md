@@ -5,6 +5,32 @@
 [![View Documentation](https://img.shields.io/badge/View-Documentation-blue?style=flat&logo=github)](https://bg-playground.github.io/Microsoft-Test-Demo-01/)
 [![Live Demo](https://img.shields.io/badge/Try-Live%20Demo-success?style=flat&logo=github)](https://bg-playground.github.io/Microsoft-Test-Demo-01/src/)
 
+---
+
+## 🎯 Quick Links for Recruiters & Hiring Managers
+
+| Resource | Description |
+|----------|-------------|
+| 🎥 **[2-Minute Video Demo](#)** | Watch the testing framework in action *(video coming soon)* |
+| 🚀 **[Live Application Demo](https://bg-playground.github.io/Microsoft-Test-Demo-01/src/)** | Try the interactive to-do app yourself |
+| 📊 **[Documentation Site](https://bg-playground.github.io/Microsoft-Test-Demo-01/)** | Comprehensive testing documentation and strategy |
+| 📈 **[Latest Test Results](https://github.com/bg-playground/Microsoft-Test-Demo-01/actions)** | View CI/CD pipeline and test execution reports |
+
+### 📋 Portfolio Highlights (30-Second Overview)
+
+- ✅ **90+ automated tests** covering 10+ categories (functional, accessibility, performance, visual, security)
+- ✅ **Multi-browser testing** across Chromium, Firefox, and WebKit
+- ✅ **WCAG 2.1 Level AA** accessibility compliance verified with axe-core
+- ✅ **Core Web Vitals** performance monitoring and optimization
+- ✅ **CI/CD pipeline** with GitHub Actions for continuous testing
+- ✅ **Visual regression** testing with screenshot comparison
+- ✅ **Mobile responsive** testing across multiple devices and viewports
+- ✅ **Comprehensive documentation** with architecture diagrams and test strategies
+
+**💡 New to this repo?** Check out the [Quick Start Guide](QUICK_START.md) for a guided 5 or 15-minute tour.
+
+---
+
 A comprehensive demonstration of the software testing lifecycle using **Microsoft Ecosystem tools and technologies**. This repository showcases best practices across all testing phases: Test Planning, Test Case Development, Test Environment Preparation, Test Execution, Test Results Analysis, and Results Reporting.
 
 > 🌐 **[View Professional Documentation Site](https://bg-playground.github.io/Microsoft-Test-Demo-01/)** | 🚀 **[Try Live Demo](https://bg-playground.github.io/Microsoft-Test-Demo-01/src/)**
