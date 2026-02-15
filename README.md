@@ -212,21 +212,26 @@ To make the landing page and live demo accessible:
 ### Running Tests
 
 ```bash
-# Run all tests (headless mode)
+# Run all tests
 npm test
 
 # Run tests in headed mode (see browser)
 npm run test:headed
 
+# Run specific test file
+npx playwright test tests/example.spec.js
+
+# View test report
+npm run test:report
+
 # Run visual regression tests
 npm run test:visual
 
-# Update visual baselines
+# Create/update visual baselines (run locally first)
 npm run test:visual:update
-
-# View last test report
-npm run test:report
 ```
+
+**Note**: Visual regression tests require baseline screenshots. On first clone, run `npm run test:visual:update` locally to create baselines, then commit them.
 
 ### Running the Sample App
 

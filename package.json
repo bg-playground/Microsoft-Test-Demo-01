@@ -10,8 +10,10 @@
     "test:coverage": "nyc npx playwright test",
     "test:coverage:report": "nyc report --reporter=html",
     "test:visual": "npx playwright test tests/visual.spec.js",
-    "test:visual:update": "npx playwright test tests/visual.spec.js --update-snapshots"
+    "test:visual:update": "npx playwright test tests/visual.spec.js --update-snapshots",
+    "create-baselines": "bash scripts/create-visual-baselines.sh || pwsh scripts/create-visual-baselines.ps1"
   },
+  "_comment_create-baselines": "Tries bash first (Mac/Linux), falls back to PowerShell (Windows). Run appropriate script directly if needed.",
   "keywords": [
     "testing",
     "playwright",
