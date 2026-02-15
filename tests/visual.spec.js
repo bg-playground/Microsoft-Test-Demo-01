@@ -21,6 +21,11 @@ test.describe('Visual Regression Tests', () => {
   });
 
   test('to-do list component should render correctly', async ({ page }) => {
+    if (skipVisualTests) {
+      test.skip(true, 'Visual baselines not yet established');
+      return;
+    }
+    
     await page.goto('/');
     
     // Check if element exists first
@@ -32,15 +37,15 @@ test.describe('Visual Regression Tests', () => {
       return;
     }
     
+    await expect(todoList).toHaveScreenshot('todo-list-component.png');
+  });
+
+  test('dark mode should render correctly', async ({ page }) => {
     if (skipVisualTests) {
       test.skip(true, 'Visual baselines not yet established');
       return;
     }
     
-    await expect(todoList).toHaveScreenshot('todo-list-component.png');
-  });
-
-  test('dark mode should render correctly', async ({ page }) => {
     await page.goto('/');
     
     // Only test if dark mode toggle exists
@@ -49,11 +54,6 @@ test.describe('Visual Regression Tests', () => {
     
     if (!exists) {
       test.skip(true, 'Dark mode toggle not found');
-      return;
-    }
-    
-    if (skipVisualTests) {
-      test.skip(true, 'Visual baselines not yet established');
       return;
     }
     
