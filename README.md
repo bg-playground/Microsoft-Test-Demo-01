@@ -134,8 +134,10 @@ Microsoft-Test-Demo-01/
 │   ├── navigation.spec.js             # Navigation tests
 │   ├── form-validation.spec.js        # Form interaction tests
 │   ├── accessibility.spec.js          # Accessibility checks
+│   ├── performance.spec.js            # Performance and Web Vitals tests
 │   ├── responsive.spec.js             # Responsive design testing
 │   ├── device-emulation.spec.js       # Device emulation testing
+│   ├── visual.spec.js                 # Visual regression tests
 │   └── api.spec.js                    # API testing examples
 ├── automated-tests/
 │   └── high-level-notes.md            # Automation framework notes (Microsoft Ecosystem)
@@ -151,6 +153,8 @@ Microsoft-Test-Demo-01/
     ├── accessibility-report.md        # Accessibility compliance documentation
     ├── architecture.md                # System architecture documentation
     ├── test-plan.md                   # Comprehensive test plan
+    ├── performance-testing.md         # Performance testing strategy
+    ├── visual-regression.md           # Visual testing documentation
     └── README.md                      # Documentation overview
 ```
 
@@ -214,6 +218,12 @@ npm test
 # Run tests in headed mode (see browser)
 npm run test:headed
 
+# Run visual regression tests
+npm run test:visual
+
+# Update visual baselines
+npm run test:visual:update
+
 # View last test report
 npm run test:report
 ```
@@ -259,6 +269,8 @@ Then navigate to `http://localhost:3000`
 - ✅ Accessibility testing (WCAG 2.1 AA compliance with axe-core)
 - ✅ Mobile and responsive design testing
 - ✅ Real device emulation (iPhone, iPad, Android)
+- ✅ Performance testing with Core Web Vitals monitoring
+- ✅ Visual regression testing with screenshot comparison
 - ✅ Code coverage reporting with Istanbul/nyc
 - ✅ CI/CD integration
 

@@ -18,6 +18,8 @@ Welcome to the Microsoft Test Demo documentation! This directory contains compre
 - **[Automated Testing Notes](../automated-tests/high-level-notes.md)** - Framework details and best practices
 - **[Manual Test Cases](../manual-tests/test-cases.md)** - Detailed test scenarios for Azure Test Plans
 - **[Accessibility Report](accessibility-report.md)** - WCAG compliance and testing approach
+- **[Performance Testing](performance-testing.md)** - Core Web Vitals and performance budgets
+- **[Visual Regression](visual-regression.md)** - Screenshot comparison and baseline management
 
 ### Interactive Resources
 - **[Professional Landing Page](index.html)** - Live documentation site
