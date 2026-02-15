@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do App</title>
+</head>
+<body>
+    <h1>To-Do App</h1>
+    <input type="text" id="new-task" placeholder="Add a new task">
+    <button id="add-task">Add Task</button>
+    <ul id="task-list"></ul>
+
+    <script>
+        document.getElementById('add-task').onclick = function() {
+            var taskInput = document.getElementById('new-task');
+            var newTask = taskInput.value;
+            if (newTask) {
+                var li = document.createElement('li');
+                li.textContent = newTask;
+                document.getElementById('task-list').appendChild(li);
+                taskInput.value = '';
+            }
+        };
+    </script>
+</body>
+</html>
