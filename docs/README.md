@@ -64,7 +64,7 @@ All documentation in this project follows these standards:
 
 ### For Employers/Reviewers
 - Use [Quick Start Guide](../QUICK_START.md) for efficient evaluation
-- Explore the [Live Demo](https://bg-playground.github.io/Microsoft-Test-Demo-01/src/) for hands-on experience
+- Explore the [Live Demo](https://bg-playground.github.io/Microsoft-Test-Demo-01/demo/) for hands-on experience
 - Check [Architecture](architecture.md) for technical depth
 
 ## 🎯 Key Documentation Features
@@ -86,5 +86,5 @@ Documentation improvements are always welcome! Please see our [Contributing Guid
 
 ---
 
-**Last Updated**: 2024  
+**Last Updated**: 2025  
 **Maintained By**: Microsoft Test Demo Team

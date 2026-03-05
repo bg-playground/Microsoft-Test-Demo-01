@@ -1,9 +1,9 @@
 # Microsoft Test Demo 01
 
 [![Playwright Tests](https://github.com/bg-playground/Microsoft-Test-Demo-01/actions/workflows/playwright.yml/badge.svg)](https://github.com/bg-playground/Microsoft-Test-Demo-01/actions/workflows/playwright.yml)
-[![Coverage](https://img.shields.io/badge/coverage-check%20tests-blue)](https://github.com/bg-playground/Microsoft-Test-Demo-01)
+[![Tests](https://img.shields.io/badge/tests-90%2B%20automated-brightgreen)](https://github.com/bg-playground/Microsoft-Test-Demo-01/actions/workflows/playwright.yml)
 [![View Documentation](https://img.shields.io/badge/View-Documentation-blue?style=flat&logo=github)](https://bg-playground.github.io/Microsoft-Test-Demo-01/)
-[![Live Demo](https://img.shields.io/badge/Try-Live%20Demo-success?style=flat&logo=github)](https://bg-playground.github.io/Microsoft-Test-Demo-01/src/)
+[![Live Demo](https://img.shields.io/badge/Try-Live%20Demo-success?style=flat&logo=github)](https://bg-playground.github.io/Microsoft-Test-Demo-01/demo/)
 
 ---
 
@@ -11,7 +11,7 @@
 
 | Resource | Description |
 |----------|-------------|
-| 🚀 **[Live Application Demo](https://bg-playground.github.io/Microsoft-Test-Demo-01/src/)** | Try the interactive to-do app yourself |
+| 🚀 **[Live Application Demo](https://bg-playground.github.io/Microsoft-Test-Demo-01/demo/)** | Try the interactive to-do app yourself |
 | 📊 **[Documentation Site](https://bg-playground.github.io/Microsoft-Test-Demo-01/)** | Comprehensive testing documentation and strategy |
 | 📈 **[Latest Test Results](https://github.com/bg-playground/Microsoft-Test-Demo-01/actions)** | View CI/CD pipeline and test execution reports |
 
@@ -25,6 +25,9 @@
 - ✅ **Visual regression** testing with screenshot comparison
 - ✅ **Mobile responsive** testing across multiple devices and viewports
 - ✅ **Comprehensive documentation** with architecture diagrams and test strategies
+- ✅ **Complete Testing Lifecycle** - All 6 stages from planning to reporting
+- ✅ **Modern Tech Stack** - Playwright, Azure DevOps, CI/CD, GitHub Actions
+- ✅ **Live Interactive Demo** - Fully functional To-Do application
 
 **💡 New to this repo?** Check out the [Quick Start Guide](QUICK_START.md) for a guided 5 or 15-minute tour.
 
@@ -32,20 +35,9 @@
 
 A comprehensive demonstration of the software testing lifecycle using **Microsoft Ecosystem tools and technologies**. This repository showcases best practices across all testing phases: Test Planning, Test Case Development, Test Environment Preparation, Test Execution, Test Results Analysis, and Results Reporting.
 
-> 🌐 **[View Professional Documentation Site](https://bg-playground.github.io/Microsoft-Test-Demo-01/)** | 🚀 **[Try Live Demo](https://bg-playground.github.io/Microsoft-Test-Demo-01/src/)**
+> 🌐 **[View Professional Documentation Site](https://bg-playground.github.io/Microsoft-Test-Demo-01/)** | 🚀 **[Try Live Demo](https://bg-playground.github.io/Microsoft-Test-Demo-01/demo/)**
 
 > ⚠️ **Note**: If the links above show 404 errors, GitHub Pages needs to be enabled. See [SETUP.md](SETUP.md) for step-by-step instructions to enable GitHub Pages and configure repository settings.
-
-## 🎯 Portfolio Highlights
-
-This project demonstrates:
-- ✅ **Complete Testing Lifecycle** - All 6 stages from planning to reporting
-- ✅ **Modern Tech Stack** - Playwright, Azure DevOps, CI/CD, GitHub Actions
-- ✅ **Professional Documentation** - Architecture diagrams, test plans, contribution guides
-- ✅ **Live Interactive Demo** - Fully functional To-Do application
-- ✅ **Automated Testing** - Multi-browser tests with screenshots and traces
-- ✅ **Accessibility First** - WCAG 2.1 compliance, ARIA attributes, keyboard navigation, semantic HTML
-- ✅ **Best Practices** - Security, performance, responsive design
 
 ### Professional Landing Page
 
@@ -114,17 +106,24 @@ This demonstration incorporates **AI-powered testing** approaches:
 
 ```
 Microsoft-Test-Demo-01/
-├── README.md                          # This file
+├── BRANCH_STRATEGY.md                 # Branching strategy and workflow
+├── CHANGELOG.md                       # Project changelog
+├── CODE_OF_CONDUCT.md                 # Code of conduct
 ├── CONTRIBUTING.md                    # Contribution guidelines
+├── LICENSE                            # MIT License
+├── QUICK_START.md                    # Quick start guide for employers/reviewers
+├── README.md                          # This file
 ├── SECURITY.md                        # Security policy and vulnerability reporting
 ├── SETUP.md                          # Repository setup and GitHub Pages configuration
-├── QUICK_START.md                    # Quick start guide for employers/reviewers
 ├── package.json                       # Node.js dependencies and scripts
 ├── playwright.config.js               # Playwright configuration (multi-browser)
 ├── .gitignore                         # Git ignore rules
 ├── .github/
 │   └── workflows/
 │       └── playwright.yml             # GitHub Actions CI workflow
+├── scripts/
+│   ├── create-visual-baselines.ps1    # Visual baseline creation (Windows)
+│   └── create-visual-baselines.sh    # Visual baseline creation (Unix)
 ├── src/
 │   ├── index.html                     # Sample To-Do app (application under test)
 │   └── styles.css                     # App styling
@@ -148,6 +147,8 @@ Microsoft-Test-Demo-01/
     ├── .nojekyll                      # Bypass Jekyll processing
     ├── styles/
     │   └── landing.css                # Landing page styling
+    ├── demo/
+    │   └── index.html                 # Live demo application (GitHub Pages)
     ├── cicd-pipeline.md               # CI/CD pipeline visualization
     ├── accessibility-report.md        # Accessibility compliance documentation
     ├── architecture.md                # System architecture documentation
@@ -295,7 +296,13 @@ npm test
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+## Community & Governance
+
+- 📋 **[BRANCH_STRATEGY.md](BRANCH_STRATEGY.md)** - Branching workflow and strategy
+- 📝 **[CHANGELOG.md](CHANGELOG.md)** - Project changelog and version history
+- 🤝 **[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)** - Community code of conduct
 
 ## Resources
 
